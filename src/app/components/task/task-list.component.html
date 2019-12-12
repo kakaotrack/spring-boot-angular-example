@@ -1,0 +1,25 @@
+<div class="row">
+    <div class="col-xs-12">
+        <table class="table table-bordered table-striped" *ngIf="tasks$ | async as tasks">
+            <thead>
+            <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let task of tasks.content; let e = even;">
+                <td>{{ task.title }}</td>
+                <td>{{ task.description }}</td>
+                <td><a [routerLink]="['/edit', task.id]">수정</a></td>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-12">
+        <a [routerLink]="['/create']">New Value</a>
+    </div>
+</div>
