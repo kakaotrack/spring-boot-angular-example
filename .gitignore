@@ -9,6 +9,10 @@ dist/
 tmp/
 app/**/*.js
 app/**/*.js.map
+src/main/resources/static/favicon.ico
+src/main/resources/static/index.html
+src/main/resources/static/*.js
+src/main/resources/static/*.js.map
 
 # dependencies
 node_modules/
