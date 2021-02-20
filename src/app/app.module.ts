@@ -30,7 +30,7 @@ const appRoutes: Routes = [
         FormsModule,
         ReactiveFormsModule,
         HttpClientModule,
-        RouterModule.forRoot(appRoutes)
+        RouterModule.forRoot(appRoutes, { relativeLinkResolution: 'legacy' })
     ],
     providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
     bootstrap: [AppComponent]
