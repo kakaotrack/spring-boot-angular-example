@@ -32,6 +32,12 @@ export class TaskApiService {
         return this.http.put<Task>("/api/tasks/" + task.id, bodyString, httpOptions)
     }
 
+    deleteTask(task: Task): Observable<Task> {
+        const httpOptions = {headers: new HttpHeaders({'Content-Type': 'application/json'})};
+        console.log("Deleting Task id : " + task.id);
+        return this.http.delete<Task>("/api/tasks/" + task.id, httpOptions)
+    }
+
     subscribe(): Subject<any> {
         let eventSource = new EventSource("/api/tasks/subscribe");
         let subscription = new Subject();

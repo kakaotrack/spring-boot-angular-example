@@ -1,0 +1,13 @@
+<div class="bg-blue-500 w-full h-full">
+    <div class="w-full p-8 flex justify-center font-sans">
+        <div class="rounded bg-blue-50 w-64 p-2">
+            <div class="flex justify-between py-1">
+                <h3 class="text-sm"><strong>TODO</strong></h3>
+            </div>
+            <div class="text-sm mt-2" *ngIf="tasks$ | async as tasks">
+                <task-view *ngFor="let task of tasks.content;" [task]="task" (modify)="refresh()" (delete)="refresh()"></task-view>
+                <task-create (create)="refresh()"></task-create>
+            </div>
+        </div>
+    </div>
+</div>

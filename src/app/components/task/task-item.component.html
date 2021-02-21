@@ -1,0 +1,29 @@
+<div *ngIf="!isEditMode" class="bg-gray-50 p-2 rounded mt-1 border-b border-grey cursor-pointer hover:bg-gray-200 flex justify-between" (focusout)="close()">
+    <div>
+        <div><strong>{{ task.title }}</strong></div>
+        {{ task.description }}
+    </div>
+    <div>
+        <img src="assets/icon/edit.svg" height="12" width="12" class="mb-2" (click)="editMode()">
+        <img src="assets/icon/delete.svg" height="12" width="12" (click)="deleteTask()">
+    </div>
+</div>
+
+<div *ngIf="isEditMode" class="bg-gray-50 p-2 rounded mt-1 border-b border-grey cursor-pointer hover:bg-gray-200">
+    <form [formGroup]="taskForm" (ngSubmit)="modifyTask()">
+    <div class="editor flex flex-col text-gray-800 p-1 max-w-2xl">
+            <input type="hidden" formControlName="id"/>
+            <input type="hidden" formControlName="version"/>
+            <input class="title bg-gray-100 border border-gray-300 p-1 mb-2 outline-none" spellcheck="false" placeholder="작업명" type="text" formControlName="title">
+            <textarea class="description bg-gray-100 sec p-1 h-20 border border-gray-300 outline-none" spellcheck="false" placeholder="작업설명" formControlName="description"></textarea>
+    </div>
+    </form>
+    <div class="buttons flex p-1">
+        <div class="btn border border-gray-300 p-1 px-2 font-semibold cursor-pointer text-gray-500 ml-auto flex" (click)="close()">
+            <img src="assets/icon/cancel.svg" height="12" width="12" class="mr-1"> Cancel
+        </div>
+        <div class="btn border border-indigo-500 p-1 px-2 font-semibold cursor-pointer text-gray-200 ml-2 bg-indigo-500 flex" (click)="modifyTask()">
+            <img src="assets/icon/save.svg" height="12" width="12" class="mr-2"> Save
+        </div>
+    </div>
+</div>
