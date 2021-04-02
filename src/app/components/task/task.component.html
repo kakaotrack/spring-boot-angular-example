@@ -2,7 +2,7 @@
     <div class="w-full p-8 flex justify-center font-sans">
         <div class="rounded bg-blue-50 w-64 p-2">
             <div class="flex justify-between py-1">
-                <h3 class="text-sm"><strong>해야 할일</strong></h3>
+                <h3 class="text-sm"><strong>해야 할 일</strong></h3>
             </div>
             <div class="text-sm mt-2" *ngIf="tasks$ | async as tasks">
                 <task-view *ngFor="let task of tasks.content;" [task]="task" (modify)="refresh()" (delete)="refresh()"></task-view>
