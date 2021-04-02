@@ -5,6 +5,7 @@ Spring Boot + Angular Example
 
 ## Integration Run (8080 port)
   
+- NPM : ```npm install```
 - Angular Build : ```ng build```
 - Build Target : src/main/resources/static
 - Run Spring Boot
