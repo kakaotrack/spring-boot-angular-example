@@ -176,8 +176,6 @@ gradle-app.setting
 # End of https://www.toptal.com/developers/gitignore/api/intellij,gradle,angular,yarn
 
 !gradle/wrapper/gradle-wrapper.jar
-!**/src/main/**
-!**/src/test/**
 
 
 target/
