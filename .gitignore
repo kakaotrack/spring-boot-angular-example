@@ -10,6 +10,8 @@ tmp/
 app/**/*.js
 app/**/*.js.map
 
+src/main/resources/static/
+
 # dependencies
 node_modules/
 bower_components/
