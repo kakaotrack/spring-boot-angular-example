@@ -47,7 +47,7 @@
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "^1.5.0",
     "ngx-tailwind": "2.1.0",
-    "postcss": "^7.0.35",
+    "postcss": "^8.4.17",
     "protractor": "~7.0.0",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.3",
     "ts-node": "~9.1.1",
